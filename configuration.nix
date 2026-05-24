@@ -81,6 +81,7 @@
     packages = with pkgs; [];
   };
   home-manager.users.ethan = { pkgs, ...}: {
+    nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
       gh
       rofi
