@@ -22,13 +22,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify = { inputs.spicetify-nix.url = "github:Gerg-L/spicetify-nix";};
+    spicetify-nix = { inputs.spicetify-nix.url = "github:Gerg-L/spicetify-nix";};
   };
 
 
 
 
-  outputs = { self, nixpkgs, home-manager, noctalia, spicetify, ... } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, noctalia, spicetify-nix, ... } @ inputs: {
     nixosConfigurations.FracturedStack = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
