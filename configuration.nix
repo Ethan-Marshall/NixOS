@@ -43,6 +43,8 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  
 
   # Set your time zone.
   time.timeZone = "America/Phoenix";
@@ -84,7 +86,6 @@
       rofi
       alacritty
       ghostty
-      swaylock
       fastfetch
     ];
     programs.fish = {
@@ -105,10 +106,12 @@
 #        init.defaultBranch = "main";
 #      };
 #    };
-    home.file.".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
-    home.file.".config/ghostty/config.ghostty".source = ./dotfiles/ghostty/config.ghostty;
+    home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
+    home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
+    # home.file.".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
+    # home.file.".config/niri/animation.kdl".source = ./dotfiles/niri/animation.kdl;
+    # home.file.".config/ghostty/config.ghostty".source = ./dotfiles/ghostty/config.ghostty;
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
-    #home.file.".config/swaylock/config".source = ./dotfiles/swaylock/config;
     # The state version is required and should stay at the version you originally installed
     home.stateVersion = "25.11";
   };
@@ -158,6 +161,11 @@
   services.displayManager.defaultSession = "niri";
 
   # List services that you want to enable:
+  
+  # required for Noctalia
+  hardware.bluetooth.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.upower.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
