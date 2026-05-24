@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -85,9 +85,9 @@
     home.packages = with pkgs; [
       gh
       rofi
-      alacritty
       ghostty
       fastfetch
+      inputs.zen-browser.packages.${pkgs.system}.default
     ];
     programs.fish = {
       enable = true;
@@ -108,7 +108,7 @@
 #      };
 #    };
     home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
-    home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
+    #home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
     # The state version is required and should stay at the version you originally installed
     home.stateVersion = "25.11";

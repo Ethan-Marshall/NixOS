@@ -26,12 +26,18 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    
+    zen-browser = {
+      url = "github:youwen5/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
 
 
 
-  outputs = { self, nixpkgs, home-manager, noctalia, spicetify-nix, ... } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, noctalia, spicetify-nix, zen-browser, ... } @ inputs: {
     nixosConfigurations.FracturedStack = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
