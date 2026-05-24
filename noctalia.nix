@@ -154,7 +154,7 @@
 
         wallpaper = {
           enabled = true;
-          overviewEnabled = false;
+          overviewEnabled = true;
           directory = "/etc/nixos/dotfiles/noctalia/wallpapers";
           enableMultiMonitorDirectories = false;
           showHiddenFiles = false;
