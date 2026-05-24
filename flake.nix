@@ -21,19 +21,22 @@
       url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify = { inputs.spicetify-nix.url = "github:Gerg-L/spicetify-nix";}
   };
 
 
 
 
-  outputs = { self, nixpkgs, home-manager, noctalia, ... } @ inputs: {
+  outputs = { self, nixpkgs, home-manager, noctalia, spicetify... } @ inputs: {
     nixosConfigurations.FracturedStack = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
-        home-manager.nixosModules.home-manager
         ./noctalia.nix
+        ./spictify.nix
+        home-manager.nixosModules.home-manager
       ];
     };
   };
