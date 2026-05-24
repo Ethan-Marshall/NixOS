@@ -11,8 +11,12 @@
   
   system.activationScripts.dotfileSymlinks = {
     text = ''
+      rm -rf /home/ethan/.config/niri
+      #rm -rf /home/ethan/.config/noctalia
+      rm -rf /home/ethan/.config/ghostty
+
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
-      ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
+     # ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
     '';
   };  
