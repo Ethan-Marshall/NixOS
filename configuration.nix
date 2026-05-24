@@ -158,8 +158,8 @@
   services.displayManager.defaultSession = "niri";
 
   # Configure automatic login
-  services.displayManager.autologin.enable = true;
-  services.displayManager.autologin.user = "ethan";
+  services.displayManager.autoLogin.enable = true;
+  services.displayManager.autoLogin.user = "ethan";
   services.displayManager.sddm.autoLogin.session = "niri";
 
   # List services that you want to enable:
