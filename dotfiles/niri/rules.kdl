@@ -1,6 +1,16 @@
 window-rule {
-    geometry-corner-radius 20 // Set every window radius to 20
+    
+    // Rounded corners for a modern look.
+    geometry-corner-radius 20
+    
+    // Clips window contents to the rounded corner boundaries.
     clip-to-geometry true
+
+
+    background-effect {
+      blur true
+      xray false
+    }
 }
 
 // if you use steam you will probably like these
@@ -17,6 +27,6 @@ window-rule {
 }
 
 layer-rule {
-    match namespace="^noctalia-wallpaper*"
+    match namespace="^noctalia-overview*"
     place-within-backdrop true
 }
