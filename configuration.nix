@@ -9,7 +9,14 @@
       ./hardware-configuration.nix
     ];
   
-  
+  system.activationScripts.dotfileSymlinks = {
+    text = ''
+      ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
+      ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
+      ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
+    '';
+  };  
+
   # Enable Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
@@ -83,11 +90,11 @@
   home-manager.users.ethan = { pkgs, ...}: {
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
-      gh
-      rofi
-      ghostty
-      fastfetch
-      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+      #gh
+      #rofi
+      #ghostty
+      #fastfetch
+      #inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
     programs.fish = {
       enable = true;
@@ -107,7 +114,7 @@
 #        init.defaultBranch = "main";
 #      };
 #    };
-    home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
+    #home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
     #home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
     # The state version is required and should stay at the version you originally installed
@@ -120,10 +127,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  # Leave alacritty for sake of if I break niri or noctalia
+  alacritty
   xsettingsd
   xrdb
   tpm2-tss
   wget
+  gh
+  rofi
+  ghostty
+  fastfetch
+  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
 
