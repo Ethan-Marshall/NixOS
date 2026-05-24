@@ -71,8 +71,8 @@
                 warningThreshold = 30;
               }
               {
-                formatHorizontal = "HH:mm";
-                formatVertical = "HH mm";
+                formatHorizontal = "h:mm AP ";
+                formatVertical = "h mm";
                 id = "Clock";
                 useMonospacedFont = true;
                 usePrimaryColor = true;
@@ -112,7 +112,7 @@
           autoStartAuth = false;
           allowPasswordWithFprintd = false;
           clockStyle = "custom";
-          clockFormat = "hh\nmm";
+          clockFormat = "h:mm AP";
           passwordChars = false;
           lockScreenBlur = 0;
           lockScreenTint = 0;
