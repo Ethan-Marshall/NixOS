@@ -108,7 +108,6 @@
 #      };
 #    };
     home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
-    home.file."/etc/sddm.conf.d/autologin.conf;".source = ./dotfiles/sddm/autologin.conf;
     #home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
     # The state version is required and should stay at the version you originally installed
@@ -157,6 +156,11 @@
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
   services.displayManager.defaultSession = "niri";
+
+  # Configure automatic login
+  services.displayManager.autologin.enable = true;
+  services.displayManager.autologin.user = "ethan";
+  services.displayManager.sddm.autoLogin.session = "niri";
 
   # List services that you want to enable:
   
