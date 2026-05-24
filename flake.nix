@@ -37,7 +37,7 @@
       modules = [
         ./configuration.nix
         ./noctalia.nix
-        ./spictify.nix
+        ./spicetify.nix
         home-manager.nixosModules.home-manager
       ];
     };
