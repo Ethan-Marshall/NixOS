@@ -108,6 +108,7 @@
 #      };
 #    };
     home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
+    home.file.".config/sddm.conf.d/autologin.conf;".source = ./dotfiles/sddm/autologin.conf;
     #home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
     # The state version is required and should stay at the version you originally installed
