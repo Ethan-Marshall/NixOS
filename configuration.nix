@@ -14,6 +14,8 @@ in
     ];
   
   
+  # Enable Nix Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   
   # Bootloader.
@@ -99,14 +101,14 @@ in
         end
       '';
     };
-    programs.git = {
-      enable = true;
-      settings = {
-        user.name = "Ethan Marshall";
-        user.email = "113003659+Ethan-Marshall@users.noreply.github.com";
-        init.defaultBranch = "main";
-      };
-    };
+#    programs.git = {
+#      enable = true;
+#      settings = {
+#        user.name = "Ethan Marshall";
+#        user.email = "113003659+Ethan-Marshall@users.noreply.github.com";
+#        init.defaultBranch = "main";
+#      };
+#    };
     home.file.".config/niri/config.kdl".source = ./dotfiles/niri/config.kdl;
     home.file.".config/ghostty/config.ghostty".source = ./dotfiles/ghostty/config.ghostty;
     #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
@@ -121,6 +123,7 @@ in
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+  firefox
   tpm2-tss
   wget
   ];
@@ -137,6 +140,21 @@ in
 
   # Enable Niri
   programs.niri.enable = true;
+  
+  programs.git = {
+      enable = true;
+      config = [
+        {
+          user = {
+            name = "Ethan Marshall";
+            email = "113003659+Ethan-Marshall@users.noreply.github.com";
+          };
+          init = {
+            defaultBranch = "main";
+          };
+        }
+      ];
+  };
   
   # Enable SDDM Display Manager
   services.displayManager.sddm.enable = true;
