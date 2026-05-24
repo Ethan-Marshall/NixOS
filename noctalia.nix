@@ -141,7 +141,7 @@
           weatherShowEffects = true;
           weatherTaliaMascotAlways = false;
           useFahrenheit = true;
-          use12hourFormat = false;
+          use12hourFormat = true;
           showWeekNumberInCalendar = false;
           showCalendarEvents = true;
           showCalendarWeather = true;
