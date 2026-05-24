@@ -26,7 +26,7 @@
 
 
 
-  outputs = { self, nixpkgs, home-manager, ... }: {
+  outputs = { self, nixpkgs, home-manager, noctalia, ... }: {
     nixosConfigurations.FracturedStack = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
