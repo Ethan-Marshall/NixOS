@@ -12,11 +12,11 @@
   system.activationScripts.dotfileSymlinks = {
     text = ''
       rm -rf /home/ethan/.config/niri
-      #rm -rf /home/ethan/.config/noctalia
+      rm -rf /home/ethan/.config/noctalia
       rm -rf /home/ethan/.config/ghostty
 
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
-     # ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
+      ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
     '';
   };  
@@ -153,7 +153,8 @@
   #   enableSSHSupport = true;
   # };
   programs.xwayland.enable = true;  
-
+  services.xserver.enable = true;
+ 
   # Enable Niri
   programs.niri.enable = true;
   

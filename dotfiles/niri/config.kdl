@@ -7,3 +7,6 @@ include "/etc/nixos/dotfiles/niri/layout.kdl"
 include "/etc/nixos/dotfiles/niri/rules.kdl"
 include "/etc/nixos/dotfiles/niri/misc.kdl"
 include "/etc/nixos/dotfiles/niri/noctalia.kdl"
+
+include "./noctalia.kdl"
+

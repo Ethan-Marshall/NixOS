@@ -26,6 +26,7 @@ window-rule {
    open-focused false
 }
 
+
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
