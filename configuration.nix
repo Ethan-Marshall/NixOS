@@ -108,6 +108,13 @@
     packages = with pkgs; [];
   };
   
+  # Enable Fingerprint Authentication and Add to PAM
+  services.fprintd.enable = true;
+  security.pam.services.system-login.fprintAuth = true;
+  # Polkit required for printd authentication
+  security.polkit.enable = true;
+  # ! Have to run sudo fprintd-enroll ethan to enroll fingerprint
+
   # Home-Manager Managed Settings
   home-manager.users.ethan = { pkgs, ...}: {
     nixpkgs.config.allowUnfree = true;
