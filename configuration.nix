@@ -9,15 +9,18 @@
       ./hardware-configuration.nix
     ];
   
+  # creates symlinks to Dotfile @ /etc/nixos/dotfiles
   system.activationScripts.dotfileSymlinks = {
     text = ''
       rm -rf /home/ethan/.config/niri
       rm -rf /home/ethan/.config/noctalia
       rm -rf /home/ethan/.config/ghostty
+      rm -rf /home/ethan/.config/fish
 
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
       ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
+      ln -sfn /etc/nixos/dotfiles/fish /home/ethan/.config/fish
     '';
   };  
 
@@ -44,9 +47,12 @@
 
   # Clean /tmp on boot
   boot.tmp.cleanOnBoot = true;
-    
-  networking.hostName = "FracturedStack"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  
+  # Define your hostname.  
+  networking.hostName = "FracturedStack";
+
+  # Enables wireless support via wpa_supplicant.
+  # networking.wireless.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -55,8 +61,6 @@
   # Enable networking
   networking.networkmanager.enable = true;
   
-  
-
   # Set your time zone.
   time.timeZone = "America/Phoenix";
 
@@ -91,56 +95,39 @@
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
+  
+  # Home-Manager Managed Settings
   home-manager.users.ethan = { pkgs, ...}: {
     nixpkgs.config.allowUnfree = true;
     home.packages = with pkgs; [
-      #gh
-      #rofi
-      #ghostty
-      #fastfetch
-      #inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+
+      # Home-Manager User Packages
+
     ];
-    programs.fish = {
-      enable = true;
-      interactiveShellInit = ''
-        set fish_greeting
-        if not test -f /tmp/fastfetch_shown
-          fastfetch
-          touch /tmp/fastfetch_shown
-        end
-      '';
-    };
-#    programs.git = {
-#      enable = true;
-#      settings = {
-#        user.name = "Ethan Marshall";
-#        user.email = "113003659+Ethan-Marshall@users.noreply.github.com";
-#        init.defaultBranch = "main";
-#      };
-#    };
-    #home.file.".config/niri" = { source = ./dotfiles/niri; recursive = true; };
-    #home.file.".config/ghostty" = { source = ./dotfiles/ghostty; recursive = true; };
-    #home.file.".config/rofi/config.rasi;".source = ./dotfiles/rofi/config.rasi;
+    
     # The state version is required and should stay at the version you originally installed
     home.stateVersion = "25.11";
   };
 
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
+  # List packages installed at system level.
   environment.systemPackages = with pkgs; [
-  # Leave alacritty for sake of if I break niri or noctalia
+  # Leave alacritty for sake of if I break Niri, Niri default config points to alacritty for keybind
   alacritty
-  xsettingsd
-  xrdb
+  qt6Packages.qt6ct
+  papirus-icon-theme
   tpm2-tss
   wget
   gh
   rofi
   ghostty
+  yazi
   fastfetch
+  nautilus
+  btop
   inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
@@ -152,12 +139,14 @@
   #   enable = true;
   #   enableSSHSupport = true;
   # };
+
   programs.xwayland.enable = true;  
   services.xserver.enable = true;
  
   # Enable Niri
   programs.niri.enable = true;
   
+  # Set Git User
   programs.git = {
       enable = true;
       config = [

@@ -114,10 +114,10 @@
                 {
                     "clockColor": "none",
                     "customFont": "",
-                    "formatHorizontal": "HH:mm ddd, MMM dd",
-                    "formatVertical": "HH mm - dd MM",
+                    "formatHorizontal": "hh:mm AP ddd, MMM dd",
+                    "formatVertical": "hh mm - MM dd",
                     "id": "Clock",
-                    "tooltipFormat": "HH:mm ddd, MMM dd",
+                    "tooltipFormat": "hh:mm AP ddd, MMM dd",
                     "useCustomFont": false
                 },
                 {
@@ -379,7 +379,7 @@
         "autoStartAuth": false,
         "avatarImage": "/etc/nixos/dotfiles/noctalia/avatar.png",
         "boxRadiusRatio": 1,
-        "clockFormat": "hh\\nmm",
+        "clockFormat": "h:mm AP ",
         "clockStyle": "custom",
         "compactLockScreen": false,
         "dimmerOpacity": 0.2,
@@ -652,13 +652,17 @@
             {
                 "enabled": true,
                 "id": "niri"
+            },
+            {
+                "enabled": true,
+                "id": "zenBrowser"
             }
         ],
         "enableUserTheming": false
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Sans",
+        "fontDefault": "Adwaita Sans",
         "fontDefaultScale": 1,
         "fontFixed": "monospace",
         "fontFixedScale": 1,
@@ -676,6 +680,62 @@
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin",
+                "darkMode": true,
+                "generationMethod": "fruit-salad",
+                "paletteColors": [
+                    "#58d6f7",
+                    "#85d1e8",
+                    "#b1c5ff",
+                    "#ffb4ab"
+                ],
+                "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin",
+                "darkMode": true,
+                "generationMethod": "fruit-salad",
+                "paletteColors": [
+                    "#aec6ff",
+                    "#aec6ff",
+                    "#e1b8f5",
+                    "#ffb4ab"
+                ],
+                "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (3).jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin",
+                "darkMode": true,
+                "generationMethod": "fruit-salad",
+                "paletteColors": [
+                    "#8dccff",
+                    "#9ccaf7",
+                    "#cdbdfa",
+                    "#ffb4ab"
+                ],
+                "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (8).jpg",
+                "useWallpaperColors": true
+            },
+            {
+                "appearance": "dark",
+                "colorScheme": "Catppuccin",
+                "darkMode": true,
+                "generationMethod": "fruit-salad",
+                "paletteColors": [
+                    "#e8c349",
+                    "#e1c46d",
+                    "#a4d397",
+                    "#ffb4ab"
+                ],
+                "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper.jpg",
+                "useWallpaperColors": true
+            }
         ],
         "fillColor": "#000000",
         "fillMode": "crop",
