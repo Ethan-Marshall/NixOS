@@ -33,16 +33,19 @@
 
   # Enable Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
-  
+    
   # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   # Only Show The 10 Most Recent Generations at Boot Menu
   boot.loader.systemd-boot.configurationLimit = 10;
-
+  # Reduce Boot Messages
+  boot.consoleLogLevel = 0;
+  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
+  
   # Init
   boot.initrd.systemd.enable = true;
+  boot.initrd.verbose = false;
   boot.initrd.systemd.tpm2.enable = true;
   # Need to run in terminal:
      # sudo systemd-cryptenroll --tpm2-device=auto --tpm2-pcrs=0+7 /dev/nvme1n1p2
@@ -54,7 +57,7 @@
   # Swap LUKS
   boot.initrd.luks.devices."luks-7e1e369d-50ef-44e9-9902-a690579591d3".device = "/dev/disk/by-uuid/7e1e369d-50ef-44e9-9902-a690579591d3";
 
-  # Clean /tmp on boot
+  # Clean /tmp on Boot, Used for fish_greeting
   boot.tmp.cleanOnBoot = true;
   
   # Define your hostname.  
