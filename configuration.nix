@@ -16,11 +16,21 @@
       rm -rf /home/ethan/.config/noctalia
       rm -rf /home/ethan/.config/ghostty
       rm -rf /home/ethan/.config/fish
+      rm -rf /home/ethan/.config/gtk-3.0
+      rm -rf /home/ethan/.config/gtk-4.0
+      rm -rf /home/ethan/.config/xsettingsd
+      rm -rf /home/ethan/.gtkrc-2.0
 
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
       ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
       ln -sfn /etc/nixos/dotfiles/fish /home/ethan/.config/fish
+      ln -sfn /etc/nixos/dotfiles/GTK/gtk-3.0 /home/ethan/.config/gtk-3.0
+      ln -sfn /etc/nixos/dotfiles/GTK/gtk-4.0 /home/ethan/.config/gtk-4.0
+      ln -sfn /etc/nixos/dotfiles/GTK/xsettingsd /home/ethan/.config/xsettingsd
+      ln -sfn /etc/nixos/dotfiles/GTK/.gtkrc-2.0 /home/ethan/.gtkrc-2.0
+
+      ${pkgs.fontconfig}/bin/fc-cache -fv
     '';
   };  
 
@@ -137,7 +147,14 @@
   # Leave alacritty for sake of if I break Niri, Niri default config points to alacritty for keybind
   alacritty
   qt6Packages.qt6ct
+  gtk3
+  dracula-theme
   papirus-icon-theme
+  bibata-cursors
+  nerd-fonts.jetbrains-mono
+  twemoji-color-font
+  noto-fonts-color-emoji
+  nwg-look
   tpm2-tss
   wget
   gh
@@ -149,7 +166,7 @@
   btop
   inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
-
+    
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
