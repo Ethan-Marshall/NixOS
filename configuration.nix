@@ -24,13 +24,22 @@
     '';
   };  
 
+  # Run Garbage Collection Weekly to Cleanup Generations
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 7d";
+  };
+
   # Enable Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   
-  # Bootloader.
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  # Only Show The 10 Most Recent Generations at Boot Menu
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   # Init
   boot.initrd.systemd.enable = true;
