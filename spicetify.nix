@@ -2,7 +2,7 @@
 
 { pkgs, inputs, ... }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in {
   home-manager.users.ethan = {
     imports = [ inputs.spicetify-nix.homeManagerModules.spicetify ];
