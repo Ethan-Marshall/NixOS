@@ -1,0 +1,7 @@
+{
+  "mpvSocket": "/tmp/mpv-socket",
+  "wallpapersFolder": "/etc/nixos/dotfiles/noctalia/wallpapers",
+  "profile": "default",
+  "fillMode": "fit",
+  "thumbCacheReady": true
+}
