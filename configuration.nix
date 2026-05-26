@@ -15,6 +15,7 @@
       rm -rf /home/ethan/.config/niri
       rm -rf /home/ethan/.config/noctalia
       rm -rf /home/ethan/.config/ghostty
+      rm -rf /home/ethan/.config/btop
       rm -rf /home/ethan/.config/fish
       rm -rf /home/ethan/.config/gtk-3.0
       rm -rf /home/ethan/.config/gtk-4.0
@@ -24,13 +25,12 @@
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
       ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
+      ln -sfn /etc/nixos/dotfiles/btop /home/ethan/.config/btop
       ln -sfn /etc/nixos/dotfiles/fish /home/ethan/.config/fish
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-3.0 /home/ethan/.config/gtk-3.0
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-4.0 /home/ethan/.config/gtk-4.0
       ln -sfn /etc/nixos/dotfiles/GTK/xsettingsd /home/ethan/.config/xsettingsd
       ln -sfn /etc/nixos/dotfiles/GTK/.gtkrc-2.0 /home/ethan/.gtkrc-2.0
-
-      ${pkgs.fontconfig}/bin/fc-cache -fv
     '';
   };  
 
@@ -117,71 +117,7 @@
     shell = pkgs.fish;
     packages = with pkgs; [];
   };
-  
-  # Enable Fingerprint Authentication and Add to PAM
-  services.fprintd.enable = true;
-  security.pam.services.system-login.fprintAuth = true;
-  # Polkit required for printd authentication
-  security.polkit.enable = true;
-  # ! Have to run sudo fprintd-enroll ethan to enroll fingerprint
 
-  # Home-Manager Managed Settings
-  home-manager.users.ethan = { pkgs, ...}: {
-    nixpkgs.config.allowUnfree = true;
-    home.packages = with pkgs; [
-
-      # Home-Manager User Packages
-
-    ];
-    
-    # The state version is required and should stay at the version you originally installed
-    home.stateVersion = "25.11";
-  };
-
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
-  # List packages installed at system level.
-  environment.systemPackages = with pkgs; [
-  # Leave alacritty for sake of if I break Niri, Niri default config points to alacritty for keybind
-  alacritty
-  qt6Packages.qt6ct
-  gtk3
-  dracula-theme
-  papirus-icon-theme
-  bibata-cursors
-  nerd-fonts.jetbrains-mono
-  twemoji-color-font
-  noto-fonts-color-emoji
-  nwg-look
-  tpm2-tss
-  wget
-  gh
-  rofi
-  ghostty
-  yazi
-  fastfetch
-  nautilus
-  btop
-  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
-    
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  programs.xwayland.enable = true;  
-  services.xserver.enable = true;
- 
-  # Enable Niri
-  programs.niri.enable = true;
-  
   # Set Git User
   programs.git = {
       enable = true;
@@ -198,6 +134,94 @@
       ];
   };
   
+  # Enable Fingerprint Authentication and Add to PAM
+  services.fprintd.enable = true;
+  security.pam.services.system-login.fprintAuth = true;
+  # Polkit required for printd authentication
+  security.polkit.enable = true;
+  # ! Have to run sudo fprintd-enroll ethan to enroll fingerprint
+
+  # Home-Manager Managed Settings
+  home-manager.users.ethan = { pkgs, ...}: {
+    nixpkgs.config.allowUnfree = true;
+    home.packages = with pkgs; [
+
+    # Home-Manager User Packages
+
+    ];
+    
+    # The state version is required and should stay at the version you originally installed
+    home.stateVersion = "25.11";
+  };
+
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
+  # List packages installed at system level.
+  environment.systemPackages = with pkgs; [
+  # Leave alacritty for sake of if I break Niri, Niri default config points to alacritty for keybind
+    alacritty
+    qt6Packages.qt6ct
+    gtk3
+    dracula-theme
+    papirus-icon-theme
+    bibata-cursors
+    nwg-look
+    tpm2-tss
+    wget
+    gh
+    github-desktop
+    vscodium
+    neovim
+    ghostty
+    yazi
+    fastfetch
+    nautilus
+    btop
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
+  ];
+
+  # fonts defined at the system level are not always applied to users
+  fonts = {
+    packages = with pkgs; [
+      nerd-fonts.monaspace
+      geist-font
+      twemoji-color-font
+      noto-fonts-color-emoji
+      nerd-fonts.jetbrains-mono
+      adwaita-fonts
+    ];
+
+    fontDir.enable = true;
+
+    fontconfig = {
+      enable = true;
+      defaultFonts = {
+        monospace = [ "MonaspiceNe Nerd Font Mono" ];
+        sansSerif = [ "Geist" ];
+        emoji = [ "Twitter Color Emoji" "Noto Color Emoji" ];
+      };
+    };
+  };
+    
+
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
+
+
+  
+  programs.xwayland.enable = true;  
+  services.xserver.enable = true;
+ 
+  # Enable Niri
+  programs.niri.enable = true;
+  
   # Enable SDDM Display Manager
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
@@ -209,10 +233,13 @@
 
   # List services that you want to enable:
   
-  # required for Noctalia
+  # Required for Noctalia
   hardware.bluetooth.enable = true;
   services.power-profiles-daemon.enable = true;
   services.upower.enable = true;
+
+  # GVFS provides backend for trash, network, and other locations for Nautilus
+  services.gvfs.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
