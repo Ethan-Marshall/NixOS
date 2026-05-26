@@ -1,0 +1,85 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:purple)\
+$os\
+$username\
+[](bg:teal fg:purple)\
+$directory\
+[](bg:dark fg:teal)\
+$git_branch\
+$git_status\
+[](fg:dark)\
+$line_break\
+$character"""
+
+right_format = """$cmd_duration"""
+
+palette = 'fracturedstack'
+
+[palettes.fracturedstack]
+purple     = "#8958D7"
+teal       = "#79DFD8"
+light_purple = "#A587E1"
+dark       = "#28293C"
+near_white = "#EBE9EE"
+gray       = "#B1B2C3"
+
+[os]
+disabled = false
+style = "bg:purple fg:dark"
+
+[os.symbols]
+NixOS    = " "
+Linux    = " 󰌽"
+Windows  = " "
+Macos    = " 󰀵"
+Arch     = " 󰣇"
+Debian   = " 󰣚"
+Ubuntu   = " 󰕈"
+Fedora   = " 󰣛"
+
+[username]
+show_always = true
+style_user = "bg:purple fg:dark"
+style_root = "bg:purple fg:near_white"
+format = '[ $user ]($style)'
+
+[directory]
+style = "bg:teal fg:dark"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+truncate_to_repo = false
+#repo_root_style = "bg:teal fg:dark"
+#repo_root_format = "[ $before_root_path$repo_root$path ]($repo_root_style)"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = "󰇚"
+"Music"     = "󰝚 "
+"Pictures"  = ""
+
+[git_branch]
+symbol = ""
+style = "bg:dark fg:light_purple"
+format = '[[ $symbol $branch ](fg:light_purple bg:dark)]($style)'
+
+[git_status]
+style = "bg:dark fg:teal"
+format = '[[($all_status$ahead_behind )](fg:teal bg:dark)]($style)'
+
+[cmd_duration]
+show_milliseconds = false
+format = "[took $duration](fg:light_purple) "
+disabled = false
+min_time = 5000
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:purple)'
+error_symbol   = '[❯](bold fg:light_purple)'
+vimcmd_symbol  = '[❮](bold fg:teal)'

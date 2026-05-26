@@ -148,16 +148,6 @@
                     "useFixedWidth": false
                 },
                 {
-                    "colorizeDistroLogo": false,
-                    "colorizeSystemIcon": "none",
-                    "colorizeSystemText": "none",
-                    "customIconPath": "",
-                    "enableColorization": false,
-                    "icon": "noctalia",
-                    "id": "ControlCenter",
-                    "useDistroLogo": false
-                },
-                {
                     "iconColor": "none",
                     "id": "WallpaperSelector"
                 },
@@ -797,9 +787,9 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#70d2ff",
-                    "#8dcff1",
-                    "#bdc2ff",
+                    "#80ceff",
+                    "#95ccf4",
+                    "#c6bffc",
                     "#ffb4ab"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (8).jpg",

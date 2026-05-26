@@ -15,18 +15,23 @@
       rm -rf /home/ethan/.config/niri
       rm -rf /home/ethan/.config/noctalia
       rm -rf /home/ethan/.config/ghostty
+      rm -rf /home/ethan/.config/fastfetch
       rm -rf /home/ethan/.config/btop
       rm -rf /home/ethan/.config/fish
+      rm -rf /home/ethan/.config/starship.toml
       rm -rf /home/ethan/.config/gtk-3.0
       rm -rf /home/ethan/.config/gtk-4.0
       rm -rf /home/ethan/.config/xsettingsd
       rm -rf /home/ethan/.gtkrc-2.0
 
+
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
       ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
+      ln -sfn /etc/nixos/dotfiles/fastfetch /home/ethan/.config/fastfetch
       ln -sfn /etc/nixos/dotfiles/btop /home/ethan/.config/btop
       ln -sfn /etc/nixos/dotfiles/fish /home/ethan/.config/fish
+      ln -sfn /etc/nixos/dotfiles/starship/starship.toml /home/ethan/.config/starship.toml
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-3.0 /home/ethan/.config/gtk-3.0
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-4.0 /home/ethan/.config/gtk-4.0
       ln -sfn /etc/nixos/dotfiles/GTK/xsettingsd /home/ethan/.config/xsettingsd
@@ -179,6 +184,7 @@
     fastfetch
     nautilus
     btop
+    starship
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 

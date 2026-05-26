@@ -1,2 +1,4 @@
 theme = noctalia
 font-family = MonaspiceNe Nerd Font Mono
+font-size = 14
+font-synthetic-style = bold

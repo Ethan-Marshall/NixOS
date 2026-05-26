@@ -8,3 +8,6 @@ if status is-interactive
       touch /tmp/fastfetch_shown
   end
 end
+
+
+starship init fish | source
