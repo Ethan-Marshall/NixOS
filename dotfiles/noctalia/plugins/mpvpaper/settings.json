@@ -3,5 +3,5 @@
   "wallpapersFolder": "/etc/nixos/dotfiles/noctalia/wallpapers",
   "profile": "default",
   "fillMode": "fit",
-  "thumbCacheReady": false
+  "thumbCacheReady": true
 }

@@ -223,6 +223,12 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "linear"
+                },
+                {
+                    "defaultSettings": {
+                        "iconColor": "none"
+                    },
+                    "id": "plugin:color-scheme-creator"
                 }
             ],
             "right": [
@@ -324,7 +330,7 @@
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Catppuccin",
+        "predefinedScheme": "FracturedStack",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -755,7 +761,7 @@
         "favorites": [
             {
                 "appearance": "dark",
-                "colorScheme": "Catppuccin",
+                "colorScheme": "FracturedStack",
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
@@ -769,7 +775,7 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Catppuccin",
+                "colorScheme": "FracturedStack",
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
@@ -783,21 +789,21 @@
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Catppuccin",
+                "colorScheme": "FracturedStack",
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#80ceff",
-                    "#95ccf4",
-                    "#c6bffc",
-                    "#ffb4ab"
+                    "#79dfd8",
+                    "#8958d7",
+                    "#a587e1",
+                    "#ebe9ee"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (8).jpg",
                 "useWallpaperColors": true
             },
             {
                 "appearance": "dark",
-                "colorScheme": "Catppuccin",
+                "colorScheme": "FracturedStack",
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
@@ -844,7 +850,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "",
+        "wallhavenQuery": "nixOS",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
