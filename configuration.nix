@@ -182,6 +182,7 @@
     gh
     github-desktop
     vscodium
+    vscode
     neovim
     ghostty
     nemo

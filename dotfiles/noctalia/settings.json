@@ -153,6 +153,12 @@
                 },
                 {
                     "defaultSettings": {
+                        "iconColor": "none"
+                    },
+                    "id": "plugin:color-scheme-creator"
+                },
+                {
+                    "defaultSettings": {
                         "autoHeight": true,
                         "bindOverrides": {
                         },
@@ -327,7 +333,7 @@
         "predefinedScheme": "FracturedStack",
         "schedulingMode": "off",
         "syncGsettings": true,
-        "useWallpaperColors": true
+        "useWallpaperColors": false
     },
     "controlCenter": {
         "cards": [
@@ -759,13 +765,13 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#58d6f7",
-                    "#85d1e8",
-                    "#b1c5ff",
-                    "#ffb4ab"
+                    "#79dfd8",
+                    "#8958d7",
+                    "#a587e1",
+                    "#ebe9ee"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
@@ -773,13 +779,13 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#aec6ff",
-                    "#aec6ff",
-                    "#e1b8f5",
-                    "#ffb4ab"
+                    "#79dfd8",
+                    "#8958d7",
+                    "#a587e1",
+                    "#ebe9ee"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (3).jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
@@ -787,13 +793,13 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#aec6ff",
-                    "#aec6ff",
-                    "#e1b8f5",
-                    "#ffb4ab"
+                    "#79dfd8",
+                    "#8958d7",
+                    "#a587e1",
+                    "#ebe9ee"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (8).jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             },
             {
                 "appearance": "dark",
@@ -801,17 +807,17 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#e6c34b",
-                    "#dfc46e",
-                    "#a4d298",
-                    "#ffb4ab"
+                    "#79dfd8",
+                    "#8958d7",
+                    "#a587e1",
+                    "#ebe9ee"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper.jpg",
-                "useWallpaperColors": true
+                "useWallpaperColors": false
             }
         ],
         "fillColor": "#000000",
-        "fillMode": "fit",
+        "fillMode": "crop",
         "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
