@@ -60,8 +60,15 @@
   boot.loader.systemd-boot.configurationLimit = 10;
   # Reduce Boot Messages
   boot.consoleLogLevel = 0;
-  boot.kernelParams = [ "quiet" "udev.log_level=0" ];
+  boot.kernelParams = [ "quiet" "nowatchdog" "nmi_watchdog=0" "udev.log_level=0" "acpi=force" ];
   
+  powerManagement.enable = true;
+  services.acpid.enable = true;
+
+  systemd.settings.Manager = {
+    DefaultTimeoutStopSec = "10s";
+  };
+
   # Init
   boot.initrd.systemd.enable = true;
   boot.initrd.verbose = false;
@@ -193,6 +200,7 @@
     fastfetch
     btop
     starship
+    efibootmgr
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
