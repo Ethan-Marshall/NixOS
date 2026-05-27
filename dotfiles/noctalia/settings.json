@@ -223,12 +223,6 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "linear"
-                },
-                {
-                    "defaultSettings": {
-                        "iconColor": "none"
-                    },
-                    "id": "plugin:color-scheme-creator"
                 }
             ],
             "right": [
@@ -539,7 +533,7 @@
         "firstDayOfWeek": 0,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Tucson",
+        "name": "Garland",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -793,10 +787,10 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#79dfd8",
-                    "#8958d7",
-                    "#a587e1",
-                    "#ebe9ee"
+                    "#aec6ff",
+                    "#aec6ff",
+                    "#e1b8f5",
+                    "#ffb4ab"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper (8).jpg",
                 "useWallpaperColors": true
@@ -807,9 +801,9 @@
                 "darkMode": true,
                 "generationMethod": "fruit-salad",
                 "paletteColors": [
-                    "#e8c349",
-                    "#e1c46d",
-                    "#a4d397",
+                    "#e6c34b",
+                    "#dfc46e",
+                    "#a4d298",
                     "#ffb4ab"
                 ],
                 "path": "/etc/nixos/dotfiles/noctalia/wallpapers/wallpaperflare.com_wallpaper.jpg",
@@ -817,13 +811,13 @@
             }
         ],
         "fillColor": "#000000",
-        "fillMode": "crop",
-        "hideWallpaperFilenames": false,
+        "fillMode": "fit",
+        "hideWallpaperFilenames": true,
         "linkLightAndDarkWallpapers": true,
         "monitorDirectories": [
         ],
         "overviewBlur": 0.4,
-        "overviewEnabled": false,
+        "overviewEnabled": true,
         "overviewTint": 0.6,
         "panelPosition": "follow_bar",
         "randomIntervalSec": 300,

@@ -19,6 +19,8 @@
       rm -rf /home/ethan/.config/btop
       rm -rf /home/ethan/.config/fish
       rm -rf /home/ethan/.config/starship.toml
+      rm -rf /home/ethan/.local/share/nemo/actions
+      rm -rf /home/ethan/.local/share/nemo/scripts
       rm -rf /home/ethan/.config/gtk-3.0
       rm -rf /home/ethan/.config/gtk-4.0
       rm -rf /home/ethan/.config/xsettingsd
@@ -32,6 +34,8 @@
       ln -sfn /etc/nixos/dotfiles/btop /home/ethan/.config/btop
       ln -sfn /etc/nixos/dotfiles/fish /home/ethan/.config/fish
       ln -sfn /etc/nixos/dotfiles/starship/starship.toml /home/ethan/.config/starship.toml
+      ln -sfn /etc/nixos/dotfiles/nemo/actions /home/ethan/.local/share/nemo/actions
+      ln -sfn /etc/nixos/dotfiles/nemo/scripts /home/ethan/.local/share/nemo/scripts
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-3.0 /home/ethan/.config/gtk-3.0
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-4.0 /home/ethan/.config/gtk-4.0
       ln -sfn /etc/nixos/dotfiles/GTK/xsettingsd /home/ethan/.config/xsettingsd
@@ -180,9 +184,12 @@
     vscodium
     neovim
     ghostty
+    nemo
+    nemo-fileroller # right click archive creation/extraction
+    ffmpegthumbnailer # video thumbnails
+    evince # pdf previews
     yazi
     fastfetch
-    nautilus
     btop
     starship
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -210,7 +217,10 @@
       };
     };
   };
-    
+
+
+  # Adds thumbnail generation for Nemo file manager
+  services.tumbler.enable = true;    
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
