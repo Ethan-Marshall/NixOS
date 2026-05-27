@@ -13,7 +13,7 @@
       "mOnError": "#ff4444",
       "mSurface": "#1a0f2e",
       "mOnSurface": "#ebe9ee",
-      "mSurfaceVariant": "#2e1f4a",
+      "mSurfaceVariant": "#4b0082",
       "mOnSurfaceVariant": "#d9dae2",
       "mOutline": "#8a8ca6",
       "mShadow": "#0c0c15",
@@ -31,7 +31,7 @@
           "white": "#EBE9EE"
         },
         "bright": {
-          "black": "#2E1F4A",
+          "black": "#4B0082",
           "red": "#FFFFFF",
           "green": "#9CF2B1",
           "yellow": "#F2EB9C",

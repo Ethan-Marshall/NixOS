@@ -51,8 +51,6 @@ format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = false
-#repo_root_style = "bg:teal fg:dark"
-#repo_root_format = "[ $before_root_path$repo_root$path ]($repo_root_style)"
 
 [directory.substitutions]
 "Documents" = "󰈙 "
