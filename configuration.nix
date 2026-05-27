@@ -21,6 +21,7 @@
       rm -rf /home/ethan/.config/starship.toml
       rm -rf /home/ethan/.local/share/nemo/actions
       rm -rf /home/ethan/.local/share/nemo/scripts
+      rm -rf /home/ethan/.config/yazi
       rm -rf /home/ethan/.config/gtk-3.0
       rm -rf /home/ethan/.config/gtk-4.0
       rm -rf /home/ethan/.config/xsettingsd
@@ -36,6 +37,7 @@
       ln -sfn /etc/nixos/dotfiles/starship/starship.toml /home/ethan/.config/starship.toml
       ln -sfn /etc/nixos/dotfiles/nemo/actions /home/ethan/.local/share/nemo/actions
       ln -sfn /etc/nixos/dotfiles/nemo/scripts /home/ethan/.local/share/nemo/scripts
+      ln -sfn /etc/nixos/dotfiles/yazi /home/ethan/.config/yazi
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-3.0 /home/ethan/.config/gtk-3.0
       ln -sfn /etc/nixos/dotfiles/GTK/gtk-4.0 /home/ethan/.config/gtk-4.0
       ln -sfn /etc/nixos/dotfiles/GTK/xsettingsd /home/ethan/.config/xsettingsd

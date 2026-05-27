@@ -18,6 +18,9 @@
         "ignoreMouseInput": false,
         "overviewLayer": false,
         "pinnedApps": [
+            "zen",
+            "spotify",
+            "codium"
         ],
         "position": "center",
         "screenshotAnnotationTool": "",
@@ -738,7 +741,7 @@
             },
             {
                 "enabled": true,
-                "id": "code"
+                "id": "yazi"
             }
         ],
         "enableUserTheming": false
