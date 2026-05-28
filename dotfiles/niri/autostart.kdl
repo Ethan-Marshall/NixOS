@@ -1,9 +1,5 @@
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
-// Noctalia V4
-//spawn-sh-at-startup "noctalia-shell & sleep 3 && noctalia-shell ipc call lockScreen lock"
-
-
 // Noctalia V5
-spawn-at-startup "noctalia"
+spawn-sh-at-startup "noctalia & sleep 3 && noctalia msg screen-lock"
