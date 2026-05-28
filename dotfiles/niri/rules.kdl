@@ -27,6 +27,16 @@ window-rule {
 }
 
 
+// Enable blur globally across Noctalia layer elements
+layer-rule {
+    match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
+    background-effect {
+      blur true
+      xray false
+    }
+}
+
+
 layer-rule {
     match namespace="^noctalia-overview*"
     place-within-backdrop true
