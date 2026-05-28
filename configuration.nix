@@ -204,6 +204,8 @@
     btop
     starship
     efibootmgr
+    ffmpeg
+    mpvpaper
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
