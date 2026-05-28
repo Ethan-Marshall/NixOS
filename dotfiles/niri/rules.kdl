@@ -13,6 +13,27 @@ window-rule {
     }
 }
 
+// Add opacity and blur to nemo
+window-rule {
+    match app-id="^nemo$"
+    opacity 0.75
+    background-effect {
+      blur true
+      xray false
+    }
+}
+
+// Add opacity and blur to nemo
+window-rule {
+    match app-id="^codium$"
+    opacity 0.75
+    draw-border-with-background false
+    background-effect {
+      blur true
+      xray false
+    }
+}
+
 // if you use steam you will probably like these
 window-rule {
     match app-id="steam"
