@@ -29,7 +29,7 @@
 
 
       ln -sfn /etc/nixos/dotfiles/niri /home/ethan/.config/niri
-      ln -sfn /etc/nixos/dotfiles/noctalia /home/ethan/.config/noctalia
+      ln -sfn /etc/nixos/dotfiles/noctaliaV5 /home/ethan/.config/noctalia
       ln -sfn /etc/nixos/dotfiles/ghostty /home/ethan/.config/ghostty
       ln -sfn /etc/nixos/dotfiles/fastfetch /home/ethan/.config/fastfetch
       ln -sfn /etc/nixos/dotfiles/btop /home/ethan/.config/btop

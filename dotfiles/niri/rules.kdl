@@ -42,17 +42,27 @@ window-rule {
 }
 
 
-// Enable blur globally across Noctalia layer elements
-layer-rule {
-    match namespace="^noctalia-(background|launcher-overlay|dock)-.*$"
-    background-effect {
-      blur true
-      xray false
-    }
-}
 
 
-layer-rule {
-    match namespace="^noctalia-overview*"
-    place-within-backdrop true
+// Noctalia V5
+
+// Floating Noctalia settings window.
+window-rule {
+  match app-id="dev.noctalia.Noctalia.Settings"
+  open-floating true
+  default-column-width { fixed 1080; }
+  default-window-height { fixed 920; }
 }
+
+debug {
+  // Allows notification actions and window activation from Noctalia.
+  honor-xdg-activation-with-invalid-serial
+}
+
+layer-rule {
+  match namespace="^noctalia-backdrop"
+  place-within-backdrop true
+}
+
+// Noctalia V5
+
