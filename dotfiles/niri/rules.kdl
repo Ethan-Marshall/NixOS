@@ -13,19 +13,13 @@ window-rule {
     }
 }
 
-// Add opacity and blur to nemo
-window-rule {
-    match app-id="^nemo$"
-    opacity 0.75
-    background-effect {
-      blur true
-      xray false
-    }
-}
-
-// Add opacity and blur to nemo
+// Add opacity and blur to spotify
 window-rule {
     match app-id="^codium$"
+    match app-id="^com.mitchellh.ghostty$"
+    match app-id="^nemo$"
+    match app-id="^spotify$"
+    match app-id="^zen$"
     opacity 0.75
     draw-border-with-background false
     background-effect {
