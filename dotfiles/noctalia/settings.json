@@ -48,7 +48,7 @@
         "backgroundOpacity": 0.93,
         "barType": "simple",
         "capsuleColorKey": "none",
-        "capsuleOpacity": 0.75,
+        "capsuleOpacity": 0.85,
         "contentPadding": 2,
         "density": "default",
         "displayMode": "always_visible",
@@ -413,7 +413,7 @@
     },
     "dock": {
         "animationSpeed": 1,
-        "backgroundOpacity": 0.75,
+        "backgroundOpacity": 0.85,
         "colorizeIcons": false,
         "deadOpacity": 0.6,
         "displayMode": "auto_hide",
@@ -542,7 +542,7 @@
         "firstDayOfWeek": 0,
         "hideWeatherCityName": false,
         "hideWeatherTimezone": false,
-        "name": "Tucson",
+        "name": "Garland",
         "showCalendarEvents": true,
         "showCalendarWeather": true,
         "showWeekNumberInCalendar": false,
@@ -576,7 +576,7 @@
         "disableWallpaper": true
     },
     "notifications": {
-        "backgroundOpacity": 0.75,
+        "backgroundOpacity": 0.85,
         "clearDismissed": true,
         "criticalUrgencyDuration": 15,
         "density": "default",
@@ -609,7 +609,7 @@
     },
     "osd": {
         "autoHideMs": 2000,
-        "backgroundOpacity": 0.75,
+        "backgroundOpacity": 0.85,
         "enabled": true,
         "enabledTypes": [
             0,
@@ -752,7 +752,7 @@
         "fontDefaultScale": 1,
         "fontFixed": "Geist Mono",
         "fontFixedScale": 1,
-        "panelBackgroundOpacity": 0.75,
+        "panelBackgroundOpacity": 0.85,
         "panelsAttachedToBar": true,
         "scrollbarAlwaysVisible": true,
         "settingsPanelMode": "attached",

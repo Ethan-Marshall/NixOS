@@ -20,7 +20,7 @@ window-rule {
     match app-id="^nemo$"
     match app-id="^spotify$"
     match app-id="^zen$"
-    opacity 0.75
+    opacity 0.85
     draw-border-with-background false
     background-effect {
       blur true
