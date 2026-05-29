@@ -91,6 +91,7 @@ directory = "~/.config/noctalia/wallpapers/"
     path = "/etc/nixos/dotfiles/noctaliaV5/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
 
 [weather]
+address = "Tucson, United States"
 auto_locate = true
 unit = "imperial"
 
