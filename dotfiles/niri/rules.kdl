@@ -15,11 +15,7 @@ window-rule {
 
 // Add opacity and blur to spotify
 window-rule {
-    match app-id="^codium$"
-    match app-id="^com.mitchellh.ghostty$"
-    match app-id="^nemo$"
-    match app-id="^spotify$"
-    match app-id="^zen$"
+    match app-id="^*$"
     opacity 0.85
     draw-border-with-background false
     background-effect {
