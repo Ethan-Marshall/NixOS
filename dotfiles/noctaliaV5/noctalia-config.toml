@@ -59,3 +59,4 @@ directory = "~/.config/noctalia/wallpapers/"
 
 [weather]
 auto_locate = true
+unit = "imperial"
