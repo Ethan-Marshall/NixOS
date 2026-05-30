@@ -209,6 +209,7 @@
     libreoffice
     vlc
     gimp
+    protonmail-desktop
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 
