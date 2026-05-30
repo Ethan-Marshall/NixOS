@@ -56,6 +56,7 @@
 
     # ── Communications ────────────────────────────────────────────────────────
     protonmail-desktop # Protons E2E encrypted email client
+    proton-vpn         # Proton VPN desktop client
 
     # ── Theming ───────────────────────────────────────────────────────────────
     qt6Packages.qt6ct  # Qt6 appearance configuration tool (for Qt app theming)
@@ -70,6 +71,11 @@
     # `pkgs.stdenv.hostPlatform.system` resolves to "x86_64-linux" on your machine,
     # which selects the correct pre-built binary for your architecture.
     inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
-
+    
+    # ── XWayland ──────────────────────────────────────────────────────────────
+    # XWayland-satellite manages XWayland as a standalone service under Niri.
+    # Niri does not handle XWayland internally like Hyprland/Sway do, so this
+    # bridges the gap and populates $DISPLAY for X11 apps like Steam.
+    xwayland-satellite
   ];
 }
