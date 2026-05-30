@@ -22,6 +22,17 @@ scale = 1.05
 start = [ "launcher", "wallpaper", "workspaces", "spac", "audio_visualizer", "media" ]
 thickness = 40
 
+[desktop_widgets]
+schema_version = 1
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
 [dock]
 active_monitor_only = true
 auto_hide = true
@@ -79,7 +90,7 @@ source = "custom"
     community_ids = [ "yazi" ]
 
 [wallpaper]
-directory = "~/.config/noctalia/wallpapers/"
+directory = "/home/ethan/.config/noctalia/wallpapers"
 
     [wallpaper.default]
     path = "/etc/nixos/dotfiles/noctaliaV5/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
@@ -92,7 +103,7 @@ directory = "~/.config/noctalia/wallpapers/"
 
 [weather]
 address = "Tucson, United States"
-auto_locate = true
+auto_locate = false
 unit = "imperial"
 
 [widget.bongocat]
