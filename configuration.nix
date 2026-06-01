@@ -114,11 +114,6 @@
   #
   # home.packages here is for user-specific tools that don't need to be
   # system-wide. Prefer this over environment.systemPackages for personal tools.
-  
-  # useGlobalPkgs forces Home Manager to use the same nixpkgs instance as the
-  # system rather than its own, eliminating version mismatch warnings and
-  # ensuring HM packages are consistent with system packages.
-  home-manager.useGlobalPkgs = true;
 
   # useUserPackages installs user packages into the users profile rather than
   # the system profile, which is the recommendedsetup when using HM as a
@@ -127,6 +122,8 @@
 
   home-manager.users.ethan = { pkgs, ... }: {
     nixpkgs.config.allowUnfree = true;
+    # Disable home-manager nixpkgs release check
+    home.enableNixpkgsReleaseCheck = false;
     home.packages = with pkgs; [
       # add user-scoped packages here
     ];
@@ -171,4 +168,5 @@
     RuntimeWatchdogSec    = "0";
     RebootWatchdogSec     = "0";
   };
+
 }

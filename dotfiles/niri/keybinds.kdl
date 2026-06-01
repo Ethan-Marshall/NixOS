@@ -12,7 +12,7 @@ binds {
     Mod+Return                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn "ghostty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+B                               hotkey-overlay-title="Open Browser: Zen-Browser" { spawn "zen"; }
-    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "noctalia msg screen-lock"; }
+    Mod+ALT+L                           hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "noctalia msg session lock"; }
     Mod+Shift+Q                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "noctalia msg panel-toggle session"; }
 
     // Please choose your own file manager.

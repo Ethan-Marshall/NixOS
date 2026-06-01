@@ -4,7 +4,7 @@
 # session: how the screen is initialized, how you log in, and which
 # compositor manages your windows.
 
-{ ... }:
+{ config, pkgs, lib, ... }:
 {
   # ── X11 / Wayland Foundation ────────────────────────────────────────────────
   # Even on a pure Wayland setup, enabling xserver is still needed on NixOS
@@ -49,4 +49,18 @@
   # when you're the only user on an encrypted disk.
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "ethan";
+
+  # Enable dconf/Gsettings infrastructure for GTK apps on Wayland
+  programs.dconf.enable = true;
+
+  # Expose GTK3 GSettings schemas so file pickers work in Qt/proprietary apps
+  environment.extraInit = ''
+    export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+  '';
+
+  # Fix Java/Swing apps (ghidra) rendering blank white on Wayland/Niri
+  environment.variables = {
+    _JAVA_AWT_WM_NONREPARENTING = "1";
+  };
+
 }

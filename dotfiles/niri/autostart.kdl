@@ -2,4 +2,4 @@
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
 // Noctalia V5
-spawn-sh-at-startup "noctalia & sleep 3 && noctalia msg screen-lock"
+spawn-sh-at-startup "noctalia & sleep 3 && noctalia msg session lock"

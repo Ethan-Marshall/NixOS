@@ -66,7 +66,7 @@ background_opacity = 0.84999999999999998
 background_opacity = 0.84999999999999998
 
 [shell]
-avatar_path = "~/.config/noctalia/avatar.png"
+avatar_path = "/home/ethan/.config/noctalia/avatar.png"
 font_family = "Geist"
 niri_overview_type_to_launch_enabled = true
 polkit_agent = true
@@ -130,3 +130,6 @@ type = "spacer"
 
 [widget.volume]
 show_label = false
+
+[widget.workspaces]
+hide_when_empty = true

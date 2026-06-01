@@ -27,26 +27,32 @@
   environment.systemPackages = with pkgs; [
 
     # ── Binary Analysis / Reversing ───────────────────────────────────────────
-    # radare2      # open source RE framework; CLI-driven disassembler/debugger
-    # binutils     # GNU binary utilities: objdump, readelf, nm, strings, etc.
+    ida-free
+    ghidra
+    ghidra-extensions.ret-sync
+    ghidra-extensions.findcrypt
+    ghidra-extensions.machinelearning
+    ghidra-extensions.ghidra-firmware-utils    
+    binutils       # GNU binary utilities: objdump, readelf, nm, strings, etc.
     #              # (often already present; good to declare explicitly)
 
     # ── Debugging ─────────────────────────────────────────────────────────────
-    # gdb          # GNU debugger — baseline for Linux exploit dev
-    #
+    gdb            # GNU debugger — baseline for Linux exploit dev
+    gef            # GDB enhancement plugin    
+
     # pwndbg and GEF are GDB enhancement plugins. They are Python-based and
     # best installed via a Home Manager Python environment or a devShell
     # to avoid conflicts with other Python packages on the system profile.
 
     # ── Network Analysis ──────────────────────────────────────────────────────
-    # wireshark    # GUI packet capture and analysis
+    wireshark      # GUI packet capture and analysis
     #              # NOTE: also uncomment the programs.wireshark block below
     #              # to grant ethan capture permissions without running as root
-    # nmap         # network scanner and port discovery
-    # tcpdump      # CLI packet capture
+    nmap           # network scanner and port discovery
+    tcpdump        # CLI packet capture
 
     # ── Fuzzing ───────────────────────────────────────────────────────────────
-    # aflplusplus  # AFL++ coverage-guided fuzzer; useful for file parser targets
+    aflplusplus    # AFL++ coverage-guided fuzzer; useful for file parser targets
 
     # ── Exploit Dev / CTF ─────────────────────────────────────────────────────
     # pwntools is a Python library and is best managed in a virtual env or
@@ -56,7 +62,8 @@
     #     (pkgs.python3.withPackages (ps: with ps; [ pwntools ]))
     #   ];
     #
-    # python3      # if you need a bare Python3 on the system path
+    pwntools
+    python3        # if you need a bare Python3 on the system path
 
   ];
 
@@ -65,6 +72,6 @@
   # a setuid-capable dumpcap binary and creates a "wireshark" group. Adding
   # ethan to that group allows capturing without sudo.
   # Uncomment both lines together when you uncomment wireshark above.
-  # programs.wireshark.enable = true;
-  # users.users.ethan.extraGroups = [ "wireshark" ];
+  programs.wireshark.enable = true;
+  users.users.ethan.extraGroups = [ "wireshark" ];
 }

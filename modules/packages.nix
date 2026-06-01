@@ -23,7 +23,6 @@
     alacritty
 
     # ── Editors ──────────────────────────────────────────────────────────────
-    neovim     # terminal text editor
     vscodium   # VS Code without Microsoft telemetry (open source build)
 
     # ── Shell Utilities ───────────────────────────────────────────────────────
