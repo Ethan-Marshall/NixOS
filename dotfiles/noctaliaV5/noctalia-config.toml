@@ -83,6 +83,7 @@ time_format = "{:%-I:%M %p}"
 builtin = "Dracula"
 community_palette = "Shien"
 custom_palette = "FracturedStack"
+mode = "auto"
 source = "custom"
 
     [theme.templates]
@@ -93,13 +94,35 @@ source = "custom"
 directory = "/home/ethan/.config/noctalia/wallpapers"
 
     [wallpaper.default]
-    path = "/etc/nixos/dotfiles/noctaliaV5/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
 
     [wallpaper.last]
-    path = "/etc/nixos/dotfiles/noctaliaV5/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/etc/nixos/dotfiles/noctaliaV5/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
+
+    [[wallpaper.favorite]]
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (3).jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (1).jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    custom_palette = "FracturedStack"
+    palette_source = "custom"
+    path = "/home/ethan/.config/noctalia/wallpapers/piqsels.com-id-sptts.jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper (5).jpg"
+    theme_mode = "auto"
+
+    [[wallpaper.favorite]]
+    path = "/home/ethan/.config/noctalia/wallpapers/wallpaperflare.com_wallpaper.jpg"
+    theme_mode = "auto"
 
 [weather]
 address = "Tucson, United States"
