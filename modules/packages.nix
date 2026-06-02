@@ -44,6 +44,7 @@
     nemo-fileroller    # adds right-click compress/extract to Nemo via File Roller
     ffmpegthumbnailer  # generates video thumbnails for Nemo's icon view
     evince             # document viewer (PDF, PostScript) for Nemo previews
+    insync             # Cloud storage sync client for Google Drive, Onedrive, Dropbox
 
     # ── Media ─────────────────────────────────────────────────────────────────
     vlc        # video player; also used as a target for CVE research
