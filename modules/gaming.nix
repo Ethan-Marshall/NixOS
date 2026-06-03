@@ -41,6 +41,8 @@
     # games from another PC on the same LAN instead of from Steam servers).
     localNetworkGameTransfers.openFirewall = true;
 
+    gamescopeSession.enable = true;
+
     # Extra packages made available inside Steam's pressure-vessel container.
     # Useful for tools that games call at runtime (e.g. mangohud inside Proton).
     extraPackages = with pkgs; [
@@ -52,7 +54,9 @@
   # Feral Interactive's performance optimization daemon. Applies CPU governor
   # changes and scheduler hints when a game is running.
   # To use per-game in Steam: add `gamemoderun %command%` to launch options.
-   programs.gamemode.enable = true;
+  programs.gamemode.enable = true;
+
+  programs.gamescope.enable = true;
 
   # ── MangoHud ─────────────────────────────────────────────────────────────────
   # In-game performance overlay (FPS, frametimes, GPU/CPU usage, temps).
