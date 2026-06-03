@@ -88,6 +88,7 @@
         ./modules/noctalia.nix       # Noctalia shell bar (flake input package)
         ./modules/spicetify.nix      # Spotify theming via Home Manager
         ./modules/gaming.nix         # Steam, Proton, controller support
+        ./modules/ai.nix             # Open WebUI, n8n
         ./modules/security-tools.nix # exploit dev / CVE research toolchain
         home-manager.nixosModules.home-manager  # injects Home Manager into NixOS
       ];
