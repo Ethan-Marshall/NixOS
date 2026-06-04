@@ -76,7 +76,7 @@
     # ProtonUp-Qt — GUI tool for installing and managing Proton-GE and other
     # Steam compatibility tool versions (Wine-GE, Luxtorpeda, etc).
     protonup-qt
-    #protonplus
+    protonplus
     #wine-wayland
 
     # Heroic Games Launcher — open source launcher for Epic Games Store and
