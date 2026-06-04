@@ -8,6 +8,8 @@ output "eDP-1" {
     //mode "1920x1200@60"
 
     // Custom resolution and scale
-    mode custom=true "3840x2400@60"
-    scale 1.6 // (use 2 for HiDPI)
+    //mode custom=true "3840x2400@60"
+    //scale 1.6 // (use 2 for HiDPI)
+    mode custom=true "2400x1500@60.0"
+    scale 1
 }

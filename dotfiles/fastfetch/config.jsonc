@@ -7,10 +7,11 @@
         "source": "~/.config/fastfetch/images/avatar.png",
         "type": "kitty-direct",
         "position": "left",
+        "width": 35,
         "padding": {
             "top": 2,
             "bottom": 2,
-            "left": 2,
+            "left": 5,
             "right": 5
         }
     },

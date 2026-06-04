@@ -26,15 +26,32 @@ window-rule {
 
 // if you use steam you will probably like these
 window-rule {
-    match app-id="steam"
-    exclude title=r#"^[Ss]team$"#
-    open-floating true
+    // Keeps the main Steam client from grabbing focus when games launch
+    match app-id="steam" title="Steam"
+    open-focused false
 }
 
 window-rule {
+    // Forces Steam games (Proton & Wine) to launch in fullscreen automatically
+    match app-id=r#"steam_app_.*"#
+    //open-fullscreen true
+    open-floating true
+    open-focused true
+}
+
+window-rule {
+   // Floats Steam's decktop notifications so they don't tile
    match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
    default-floating-position x=10 y=10 relative-to="bottom-right"
    open-focused false
+}
+
+
+window-rule {
+    // Ensures the Friends List, Chat, and Downloads stay floating
+    match app-id="steam" title="Friends List"
+    match app-id="steam" title="Special Offers"
+    open-floating true
 }
 
 

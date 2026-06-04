@@ -56,7 +56,9 @@
   # To use per-game in Steam: add `gamemoderun %command%` to launch options.
   programs.gamemode.enable = true;
 
-  programs.gamescope.enable = true;
+  # ── Gamescope ────────────────────────────────────────────────────────────────
+  # Gamescope allows launching games in a virtualized display
+  #programs.gamescope.enable = true;
 
   # ── MangoHud ─────────────────────────────────────────────────────────────────
   # In-game performance overlay (FPS, frametimes, GPU/CPU usage, temps).
@@ -73,7 +75,9 @@
   environment.systemPackages = with pkgs; [
     # ProtonUp-Qt — GUI tool for installing and managing Proton-GE and other
     # Steam compatibility tool versions (Wine-GE, Luxtorpeda, etc).
-    # protonup-qt
+    protonup-qt
+    #protonplus
+    #wine-wayland
 
     # Heroic Games Launcher — open source launcher for Epic Games Store and
     # GOG games, with Proton/Wine support built in.
@@ -81,6 +85,17 @@
 
     # Lutris — open gaming platform that manages Wine prefixes and install
     # scripts for a wide range of non-Steam games and launchers.
-    # lutris
+    lutris
   ];
+
+  environment.variables = {
+    # Enables Proton to run in Wayland
+    PROTON_ENABLE_WAYLAND = "1";
+    # Enable Proton NTSync
+    PROTON_ENABLE_NTSYNC = "1";
+    # Disables XALIA for Proton
+    PROTON_USE_XALIA = "0";
+    # Enables Proton to use Direct X translation to Vulkan
+    PROTON_USE_DXVK = "1";
+  };
 }
