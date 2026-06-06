@@ -77,7 +77,7 @@
     # Steam compatibility tool versions (Wine-GE, Luxtorpeda, etc).
     protonup-qt
     protonplus
-    #wine-wayland
+    wine-wayland
 
     # Heroic Games Launcher — open source launcher for Epic Games Store and
     # GOG games, with Proton/Wine support built in.

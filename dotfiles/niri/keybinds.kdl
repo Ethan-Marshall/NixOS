@@ -113,7 +113,7 @@ binds {
     Mod+W                               { toggle-column-tabbed-display; }
 
     // ─── Screenshots ───
-    Mod+Print                          { screenshot; }
+    Mod+Print                          { spawn-sh "noctalia msg screenshot-region"; }
     Mod+CTRL+Print                        { screenshot-screen; }
     Mod+ALT+Print                        { screenshot-window; }
 

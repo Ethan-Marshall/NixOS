@@ -45,6 +45,7 @@
     ffmpegthumbnailer  # generates video thumbnails for Nemo's icon view
     evince             # document viewer (PDF, PostScript) for Nemo previews
     insync             # Cloud storage sync client for Google Drive, Onedrive, Dropbox
+    peazip
 
     # ── Media ─────────────────────────────────────────────────────────────────
     vlc        # video player; also used as a target for CVE research
@@ -53,6 +54,7 @@
     # ── Office / Graphics ─────────────────────────────────────────────────────
     libreoffice  # open source office suite (Writer, Calc, Impress, etc.)
     gimp         # raster image editor
+    loupe        # gtk4 image viewer
 
     # ── Communications ────────────────────────────────────────────────────────
     protonmail-desktop # Protons E2E encrypted email client
