@@ -59,6 +59,7 @@
     # ── Communications ────────────────────────────────────────────────────────
     protonmail-desktop # Protons E2E encrypted email client
     proton-vpn         # Proton VPN desktop client
+    discord
 
     # ── Theming ───────────────────────────────────────────────────────────────
     qt6Packages.qt6ct  # Qt6 appearance configuration tool (for Qt app theming)
