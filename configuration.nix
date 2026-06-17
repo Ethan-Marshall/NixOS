@@ -138,6 +138,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # ── Supporting Services ─────────────────────────────────────────────────────
+  # Tailscale
+  services.tailscale.enable = true; 
 
   # Tumbler is a thumbnail generation daemon. Nemo uses it to render image
   # and video previews in the file manager sidebar and icon view.

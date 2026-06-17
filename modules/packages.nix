@@ -80,5 +80,8 @@
     # Niri does not handle XWayland internally like Hyprland/Sway do, so this
     # bridges the gap and populates $DISPLAY for X11 apps like Steam.
     xwayland-satellite
-  ];
+
+    trayscale
+    rustdesk-flutter
+    ];
 }
