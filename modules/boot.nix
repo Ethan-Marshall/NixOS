@@ -75,4 +75,8 @@
   # it from accumulating stale data across reboots. Also used by the fish shell
   # greeting script to detect a fresh boot vs a new terminal session.
   boot.tmp.cleanOnBoot = true;
+
+  # Force the kernel to load Intel video modules immediately at boot
+  boot.initrd.kernelModules = [ "i915" ];
+  services.xserver.videoDrivers = [ "modesetting" ];
 }

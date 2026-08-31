@@ -83,5 +83,7 @@
 
     trayscale
     rustdesk-flutter
+    obsidian
+#    logseq
     ];
 }

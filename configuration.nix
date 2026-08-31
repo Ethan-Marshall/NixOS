@@ -171,4 +171,25 @@
     RebootWatchdogSec     = "0";
   };
 
+
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      # Optimized for 11th Gen Tiger Lake
+      intel-media-driver
+      # Accelleration Wrapper
+      libvdpau-va-gl
+      # Video Processing runtime for Iris Xe
+      vpl-gpu-rt
+    ];
+    extraPackages32 = with pkgs; [
+      driversi686Linux.intel-media-driver
+    ];
+  };
+
+  services.throttled.enable = true;
+  powerManagement.cpuFreqGovernor = "performance";
+
 }

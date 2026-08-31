@@ -27,7 +27,7 @@
   environment.systemPackages = with pkgs; [
 
     # ── Binary Analysis / Reversing ───────────────────────────────────────────
-    ida-free
+    #ida-free
     ghidra
     ghidra-extensions.ret-sync
     ghidra-extensions.findcrypt
